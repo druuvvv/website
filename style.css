@@ -1,0 +1,35 @@
+
+.headings{
+    font-family: 'Freehand', cursive;
+}
+
+body{
+    --x : yellow;
+}
+
+.abt{
+    font-family: 'Fuzzy Bubbles', cursive;
+}
+
+#java:hover{
+      background-color: green;
+}
+.logo1{
+    display: table;
+}
+
+.logo2{
+    display: table-cell;
+    margin: 4px;
+}
+
+.rounded-4{
+    border: 1px solid black;
+}
+
+.skill:hover{
+    cursor: pointer;
+}
+.rounded-2{
+    border: 1px solid black;
+}
