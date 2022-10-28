@@ -33,6 +33,9 @@
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="#projects"><h5 class=" text-light">Projects</h5></a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#codeforces_api"><h5 class=" text-light">Codeforces API</h5></a>
+            </li>
           </ul>
         </div>
       </div>
@@ -116,7 +119,8 @@
         <div class="col-12  bg-primary">
           <h1 class="text-center display-2 headings  bg-info rounded-2 mt-5 mb-5 head1" id="projects">PROJECTS</h1>
         <div class="row">
-          <div class="col" style="display:flex ; justify-content: center; align-items: center; height: 100%;"><div class="card" >
+          <div class="col" style="display:flex ; justify-content: center; align-items: center; height: 100%;">
+            <div class="card rounded-2" >
             <img src="resources/webscraper.png" class="card-img-top" alt="...">
             <div class="card-body h-100" style="height:100% ;">
               <h5 class="card-title" style="height:100% ;">Web Scrapers</h5>
@@ -124,15 +128,17 @@
            
             </div>
           </div></div>
-          <div class="col" style="display:flex ; justify-content: center; align-items: center; height: 100%;"><div class="card">
+          <div class="col" style="display:flex ; justify-content: center; align-items: center; height: 100%;"><div class="card rounded-2">
             <img src="resources/bootstrap-icons.png" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title">Bootstrap website</h5>
               <p class="card-text">A basic website majorly frontend built on CSS framework Bootstrap. <br> Currently lame but will soon get some JS action going on</p>
               <a href="https://github.com/druuvvv/bootstrap-website.git" target="_blank" class="btn btn-primary">Source code</a>
             </div>
-          </div></div>
-          <div class="col" style="display:flex ; justify-content: center; align-items: center;"><div class="card" >
+          </div>
+        </div>
+          <div class="col" style="display:flex ; justify-content: center; align-items: center;">
+            <div class="card rounded-2" >
             <img src="resources/disord-bot.png" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title">Torrenzo</h5>
@@ -143,9 +149,55 @@
           </div></div>
         </div>
         </div>
+      </div>
+        <div class="row" id="codeforces_api">
+          <div class="col-12  bg-primary"  >
+            <h1 class="text-center display-2 headings  bg-info rounded-2 mt-5 mb-5 me-0 head1 w-100">CODEFORCES API</h1>
+          </div>
+        </div>
+            <div class="row justify-content-center">
+
+              <div class="col " style="display:flex ; justify-content: center; align-items: center; height: 100%; width: 100%">
+                <form action="" method = "get">
+              <div class="input-group m rounded-2">
+                <span class="input-group-text">Codeforces ID</span>
+                <input type="text" class="form-control" name="cf_id">
+                <input type="button" class="btn btn-info" value="Submit" onclick="readText(this.form)">
+              
+              </div>
+            </form>
+            </div>
+          
+            </div>
+           <br>
+            <div class="row justify-content-center">
+            
+              <div class="col" id="cardHolder" style=" display:none ; justify-content: center; align-items: center; height: 100%;">
+                <div class="card rounded-2" >
+                  <img src="" class="card-img-top" alt="..." id="userImage">
+                  <div class="card-body">
+                    <h5 class="card-title" id="userName">Card title</h5>
+                    <p class="card-text">
+                      <ul class="list-group">
+                        <li class="list-group-item" id="userRating"></li>
+                        <li class="list-group-item" id="userCountry"></li>
+                        <li class="list-group-item" id="userRank"></li>
+                        <li class="list-group-item" id="userContribution"></li>
+                      </ul>
+                    </p>
+                    <a href="" class="btn btn-primary" id="Profile" target="_blank">Profile</a>
+                  </div>
+                </div>
+                </div>
+               
+                </div>
+            
+          
+            
+            
         
 
-    </div>
+    
    
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
