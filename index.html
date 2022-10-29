@@ -37,7 +37,10 @@
               <a class="nav-link active" aria-current="page" href="#codeforces_api"><h5 class=" text-light">Codeforces API</h5></a>
             </li>
           </ul>
+
+          
         </div>
+        <button type="button" id="darkBtn" class="btn btn-light" onclick="toggleDemo()" ><img src="resources/darkmode.png" alt="" class="img-fluid" id="darklight"></button>
       </div>
     </nav>
   
@@ -115,9 +118,9 @@
           <!-- <p class="text-center fs-4 pt-4">Learnt this alongwith Object oriented programming its weird but fascinating</p> -->
         </div>
       </div>
-      <div class="row" id="skills">
+      <div class="row" id="projects">
         <div class="col-12  bg-primary">
-          <h1 class="text-center display-2 headings  bg-info rounded-2 mt-5 mb-5 head1" id="projects">PROJECTS</h1>
+          <h1 class="text-center display-2 headings  bg-info rounded-2 mt-5 mb-5 head1">PROJECTS</h1>
         <div class="row">
           <div class="col" style="display:flex ; justify-content: center; align-items: center; height: 100%;">
             <div class="card rounded-2" >
@@ -161,7 +164,7 @@
                 <form action="" method = "get">
               <div class="input-group m rounded-2">
                 <span class="input-group-text">Codeforces ID</span>
-                <input type="text" class="form-control" name="cf_id">
+                <input type="text" class="form-control" name="cf_id" placeholder="" id="cfff">
                 <input type="button" class="btn btn-info" value="Submit" onclick="readText(this.form)">
               
               </div>
@@ -192,14 +195,6 @@
                
                 </div>
             
-          
-            
-            
-        
-
-    
-   
-    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
     
     <footer class="d-flex flex-wrap justify-content-between align-items-center py-2 my-4 border-top bg-light rounded-2">
@@ -211,5 +206,12 @@
       </ul>
     </footer>
     <script src="scipt.js"></script>
+    <script src="halfmoon.js"></script>
+<script type="text/javascript">
+
+  function toggleDemo() {
+    halfmoon.toggleDarkMode();
+  }
+</script>
   </body>
 </html>
