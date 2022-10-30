@@ -2,7 +2,7 @@ let handle;
 let ip;
 let card = document.getElementById("cardHolder");
 let TimeOffset;
-//alert("The website changes into dark and light mode in the backend but i was too lazy and tired of doing all the CSS so please just assume that the frontend changed.\nThe dark night mode toggle button has also been given for user convinience. The proofs of mode change will be visible to...")
+alert("The website changes into dark and light mode Automatically. The dark-light mode toggle button has also been given for user convinience.\nThe dark mode button shows the state of the backend, if its moon your local time is past 6 pm thus, the website is in dark mode.")
 getIP();
 
 
@@ -17,10 +17,48 @@ function darklightchanger() {
         mode.id = "darklight";
         mode.setAttribute("src", "resources/darkmode.png");
 
+        let skill = document.querySelectorAll(".skill");
+        for(let i =0 ; i<8;i++){
+        skill[i].className = "col align-content-center bg-dark rounded-4  m-1 p-3 skill";
+        }
+
+        let about = document.querySelectorAll(".about");
+        for(let i =0 ; i<3 ;i++){
+            about[i].className = "col text-center bg-dark text-light rounded-4 ms-1 me-1 mt-2 about";
+        }
+
+        let cark = document.querySelectorAll(".cark");
+        for(let i =0; i<cark.length ; i++){
+            cark[i].classList.add("bg-dark");
+            cark[i].classList.add("text-light");
+        }
+
+        let homm = document.querySelector(".homm");
+        homm.className = "text-center bg-dark text-light rounded-4 p-4 homm";
+
     }
     else {
         mode.id = "lightdark";
         mode.setAttribute("src", "resources/sun.png");
+
+        let skill = document.querySelectorAll(".skill");
+        for(let i =0 ; i<8;i++){
+        skill[i].className = "col align-content-center bg-light rounded-4  m-1 p-3 skill";
+        }
+
+        let about = document.querySelectorAll(".about");
+        for(let i =0 ; i<3 ;i++){
+            about[i].className = "col text-center bg-light text-dark rounded-4 ms-1 me-1 mt-2 about";
+        }
+
+        let cark = document.querySelectorAll(".cark");
+        for(let i =0; i<cark.length ; i++){
+            cark[i].classList.remove("bg-dark");
+            cark[i].classList.remove("text-light");
+        }
+
+        let homm = document.querySelector(".homm");
+        homm.className = "text-center bg-light text-dark rounded-4 p-4 homm";
     }
 }
 
@@ -64,26 +102,34 @@ function getLocation() {
         let CurrentHour = date2.getHours();
 
         console.log(CurrentHour);
-        let x = document.getElementById("cfff");
-        x.setAttribute("placeholder", CurrentHour);
+
         if (CurrentHour >= 18 || CurrentHour < 6) {
-            let mode = document.getElementById("darklight");
-            if (mode == null) {
-                mode = document.getElementById("lightdark");
+
+            let skill = document.querySelectorAll(".skill");
+            for(let i =0 ; i<8;i++){
+            skill[i].className = "col align-content-center bg-dark rounded-4  m-1 p-3 skill";
+            }
+
+            let about = document.querySelectorAll(".about");
+            for(let i =0 ; i<3 ;i++){
+                about[i].className = "col text-center bg-dark text-light rounded-4 ms-1 me-1 mt-2 about";
+            }
+
+            let cark = document.querySelectorAll(".cark");
+            for(let i =0; i<cark.length ; i++){
+                cark[i].classList.add("bg-dark");
+                cark[i].classList.add("text-light");
+            }
+
+            let homm = document.querySelector(".homm");
+            homm.className = "text-center bg-dark text-light rounded-4 p-4 homm";
+
+                let mode = document.getElementById("lightdark");
                 mode.id = "darklight";
                 mode.setAttribute("src", "resources/darkmode.png");
-        
-            }
-        
-        }
-        else {
-            let mode = document.getElementById("lightdark");
-            if (mode == null) {
-                mode = document.getElementById("darklight");
-                mode.id = "lightdark";
-                mode.setAttribute("src", "resources/sun.png");
-        
-            }
+
+           
+
         }
     })
 }
