@@ -131,7 +131,14 @@ function getLocation() {
            
 
         }
-    })
+        else{
+            let mode = document.getElementById("darklight");
+            mode.id = "lightdark";
+            mode.setAttribute("src", "resources/sun.png");
+             
+        }
+    }
+    )
 }
 
 
