@@ -186,3 +186,17 @@ function getInfo(URL, handle) {
         }
     )
 }
+if(screen.availWidth < 600){
+    var projcard = document.querySelectorAll(".projcard");
+    var wawa = document.querySelectorAll(".wawa");
+    for(let i=0;i<3;i++){
+        projcard[i].classList.remove('col');
+        projcard[i].classList.add('col-12');
+        projcard[i].classList.add('mt-2');
+
+    }
+    for(let i=0;i<2;i++){
+        wawa[i].classList.remove('col');
+        wawa[i].classList.add('col-12');
+    }
+}
